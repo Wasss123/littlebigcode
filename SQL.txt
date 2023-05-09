@@ -1,0 +1,30 @@
+Question num 1 : 
+
+select d.date, sum(d.total) as ventes from (
+	select date, prod_price*prod_qty as total 
+	from transaction 
+) as d
+group by d.date
+where d.date >= "01/01/2019" and d.date <= "31/12/2019"
+order by d.date asc
+
+Question num 2 :
+
+select c.client, sum(c.vente_meuble) as ventes_meuble, sum(c.vente_deco) as ventes_deco
+from(
+select a.client,
+	case a.product_type when "MEUBLE" then a.ventes else 0 end as vente_meuble,
+	case a.product_type when "DECO" then a.bentes else 0 end as vente_deco
+from (
+	select date, order_id,client_id,prod_id, prod_price*prod_qty as vente, product_type
+	from transaction as t join product_nomenclature as p
+	on t.prod_id = p.prod_id
+	where date >= "01/01/2019" and date <= "31/12/2019) as a
+) as c
+group by c.client
+
+
+
+
+
+
