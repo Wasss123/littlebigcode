@@ -12,4 +12,9 @@ comporte une fonction qui permet de sauvegarder dictionnaire qui représente le 
 ## main.py
 La fonction principale qui fait appele au autre fonction pour extraire traiter, générer le graph de liasion et le sauvegarder 
 ## Le dossier test
-Ce dossier comporte un sous dossier resources qui test.py afin de réaliser les test unitaires
+Ce dossier comporte un sous dossier resources et test.py afin de réaliser les test unitaires
+
+## Plus loin.txt 
+Vous trouvez la réponse de la question 6 dans ce fichier
+## SQL.txt
+Vous trouvez les réponse de la section II)SQL dans ce fichier
