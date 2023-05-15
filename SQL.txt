@@ -8,6 +8,7 @@ group by d.date
 where d.date >= "01/01/2019" and d.date <= "31/12/2019"
 order by d.date asc
 
+
 Question num 2 :
 
 select c.client, sum(c.vente_meuble) as ventes_meuble, sum(c.vente_deco) as ventes_deco
