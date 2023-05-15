@@ -1,0 +1,3 @@
+Pour évoluer le code à des grooses volumétrie on peut :
+	- Changer le format des input et utiliser d'autre type de donné au lieu du CSV
+	- Changer le traitement en utilisant les dataframes et le traitement distribué avec Spark

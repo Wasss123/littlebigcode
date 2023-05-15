@@ -3,20 +3,20 @@ import save
 import process
 
 if __name__ == "__main__":
-    # extraction des données
-    Drugs = extract.extract_drugs("./data/drugs.csv")
-    Pubmed = extract.extract_publications("./data/pubmed.csv")
-    Pubmed.pop("\t")
-    Clinals = extract.extract_clinical_trials("./data/clinical_trials.csv")
+    # data extraction
+    drugs = extract.extract_drugs("./data/drugs.csv")
+    pubmed = extract.extract_publication("./data/pubmed.csv")
+    pubmed.pop("\t")
+    clinals = extract.extract_clinical_trials("./data/clinical_trials.csv")
 
-    # Generation du JSON de liaison
+    # JSON generation
     result = {}
-    for drug in Drugs:
+    for drug in drugs:
         result[drug] = {
-            "journal": process.find_in_journal(drug, Drugs, Pubmed, Clinals),
-            "pubmed": process.find_in_source(drug, Drugs, Pubmed),
-            "scientific_title": process.find_in_source(drug, Drugs, Clinals),
+            "journal": process.find_in_journal(drug, drugs, pubmed, clinals),
+            "pubmed": process.find_in_source(drug, drugs, pubmed),
+            "scientific_title": process.find_in_source(drug, drugs, clinals),
         }
 
-    # Stockage du fichier JSON
-    save.ecrire(result)
+    # saving JSON file
+    save.write(result)

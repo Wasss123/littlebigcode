@@ -4,8 +4,13 @@ import json
 
 
 def extract_drugs(filename):
-    # extraction des medicament du fichier drug csv
-    # Stocker les données dans un fichier json
+    """
+    extract_drugs: extracts drug data from drugs.csv
+
+    filename : path of drugs.csv file
+
+    return: dict containing id and name of drugs
+    """
     drugs = {}
     with open(filename, "r") as csvfile:
         reader = csv.DictReader(csvfile)
@@ -16,9 +21,16 @@ def extract_drugs(filename):
     return drugs
 
 
-def extract_publications(filename):
+def extract_publication(filename):
     # extraction des publication du fichier pubmed csv
     # Stocker les données dans un fichier json
+    """
+    extract_publications: extracts publication data from pubmed.csv
+
+    filename : path of pubmed.csv csv pubmed.csv
+
+    return: dict containing id as key and title date and journal as value
+    """
     publications = {}
     with open(filename, "r") as csvfile:
         reader = csv.DictReader(csvfile)
@@ -36,8 +48,13 @@ def extract_publications(filename):
 
 
 def extract_clinical_trials(filename):
-    # extraction des medicament du fichier clinal trial csv
-    # Stocker les données dans un fichier json
+    """
+    extract_publications: extracts publication data from clinical_trials.csv
+
+    filename : path of clinical_trials.csv
+
+    return: dict containing id as key and title date and journal as value
+    """
     clinical_trials = {}
     with open(filename, "r") as csvfile:
         reader = csv.DictReader(csvfile)
@@ -55,6 +72,13 @@ def extract_clinical_trials(filename):
 
 
 def extract_publications_json(filename):
-    with open(filename, "r") as mon_fichier:
-        publications = json.load(mon_fichier)
+    """
+    extract_publications: extracts publication data from pubmed.json
+
+    filename : path of pubmed.json
+
+    return: dict containing id as key and title date and journal as value
+    """
+    with open(filename, "r") as my_file:
+        publications = json.load(my_file)
     return publications

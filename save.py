@@ -1,7 +1,12 @@
 import json
+def write(result):
 
+    """
+    write saves the json file
 
-def ecrire(Resultat):
-    # Stockage du fichier JSON
-    with open("sortie.json", "w") as mon_fichier:
-        json.dump(Resultat, mon_fichier)
+    result : dict representing the graph
+
+    return: None
+    """
+    with open("graph.json", "w") as mon_fichier:
+        json.dump(result, mon_fichier)
