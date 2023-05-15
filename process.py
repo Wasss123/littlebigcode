@@ -1,7 +1,14 @@
 def find_in_source(drug, Drugs, source):
-    # Recherche de drug dans les publication
-    # retourner une list de toutes les publications et leurs dates
-    # dans lesquelles figures le mot du médicament
+    """
+    find_in_source does Recherche de drug dans les publication
+
+    drug : id of the drug
+    Drugs: dict of all drugs
+    source: either Pubmed dict or Cinals dict
+
+    return: une list de toutes les publications et leurs dates dans lesquelles figures le mot du medicament
+    """
+    assert isinstance(drug, dict)
     list = []
     for pub in source:
         if Drugs[drug].lower() in source[pub]["title"].lower():
@@ -9,7 +16,7 @@ def find_in_source(drug, Drugs, source):
     return list
 
 
-def find_in_journal(drug, Drugs, Pubmed, Clinals):
+def find_in_journal(drug : dict, Drugs : dict, Pubmed, Clinals) -> list:
     # Recherche de drug dans les journaux
     # retourner une list de toutes les publications et leurs dates
     # dans lesquelles figures le mot du médicament
