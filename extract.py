@@ -22,8 +22,6 @@ def extract_drugs(filename):
 
 
 def extract_publication(filename):
-    # extraction des publication du fichier pubmed csv
-    # Stocker les données dans un fichier json
     """
     extract_publications: extracts publication data from pubmed.csv
 
