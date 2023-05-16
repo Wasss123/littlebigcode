@@ -1,6 +1,6 @@
 # littlebigcode
-Ce projet est réalisé par Wassim KHELIL dans le cadre de son entretien technique avec l'entreprise LITTLEBIGCODE
-Ce project contient :
+This project is created by Wassim KHELIL as part of technical interview with LITTLEBIGCODE.
+The objectif is created a JSON file representing a graph that links the drug and it mention in articles pubmed,clinals trials and journals
 ## Le dossier data 
 Ce dossier contients les données drugs.csv, pubmed.csv, pubmed.json et clinal_trials.csv
 ## Extract.py
