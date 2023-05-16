@@ -10,6 +10,6 @@ This project is seperated as follow
 - test folder to perform unit tests
 
 ## Plus loin.txt 
-Vous trouvez la réponse de la question 6 dans ce fichier
+Text file created to answer to question 6 
 ## SQL.txt
-Vous trouvez les réponse de la section II)SQL dans ce fichier
+Text file created to answer questions of SQL queries of section II
