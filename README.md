@@ -3,15 +3,11 @@ This project is created by Wassim KHELIL as part of technical interview with LIT
 The objectif is created a JSON file representing a graph that links the drug and it mention in articles pubmed,clinals trials and journals
 ## Comments 
 This project is seperated as follow 
-- Extract.py Contains Comporte 4 fonctions qui permmettent d'extraire les données des fichies à partir de leurs chemins
-- process.py
-comporte 2 functions qui permettent de chercher si un médicaments et mentionné dans une publication ou journal 
-- save.py
-comporte une fonction qui permet de sauvegarder dictionnaire qui représente le graph de liaison sous format de JSON
-- main.py
-La fonction principale qui fait appele au autre fonction pour extraire traiter, générer le graph de liasion et le sauvegarder 
-- Le dossier test
-Ce dossier comporte un sous dossier resources et test.py afin de réaliser les test unitaires
+- Extract.py contains functions to extract data from csv files given their paths
+- process.py contains functions that search and verify if a given drug is mentioned in pubmed, clinal trials or journal
+- save.py contains function that saves and output the result in JSON format
+- main.py program to execute the extraction, processing and saving functions
+- test folder to perform unit tests
 
 ## Plus loin.txt 
 Vous trouvez la réponse de la question 6 dans ce fichier
