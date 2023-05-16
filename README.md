@@ -10,6 +10,6 @@ This project is seperated as follow
 - test folder to perform unit tests
 
 ## Plus loin.txt 
-Text file created to answer to question 6 
+Text file created to answer question 6 
 ## SQL.txt
 Text file created to answer questions of SQL queries of section II
